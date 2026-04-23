@@ -2,26 +2,47 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-
-    <title>First project with personal data</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Mi IA SaaS - Panel de Control</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
+    <!--<script src='main.js'></script>-->
 </head>
 
 <body>
-    <button id="theme-toggle">Bright Mode</button>
-    <main class="card">
-        <img src="photo.jpg" alt="Image of Gerky" class="profile-photo">
-        <h1>Gerald Lima</h1>
-        <p>Learning Web Development from scratch</p>
-        <div class="links-container">
-            <a href="https://www.linkedin.com" class="button">LinkedIn</a>
-            <a href="https://github.com" class="button">GitHub</a>
-            <a href="https://www.infojobs.net" class="button">InfoJobs</a>            
-        </div>
-    </main>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2 onpointerover="AnimationEvent">IA Master</h2>
+            </div>
+            <nav class="menu-lateral">
+                <button>+ Nuevo chat</button>
+                <div class="historial">
+                    <p>Historia reciente...</p>
+                    <ul>
+                        <li>¿Cómo hacer dieta?</li>
+                        <li>Receta de pizza</li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="perfil">
+                <span>Usuario Pro</span>
+            </div>
+        </aside>
+        <main class="chat-area">
+            <header class="chat-header">
+                <h3>Conversación actual</h3>
+            </header>
+            <section class="mensajes-container">
+                <div class="mensaje-ia">¡Hola! En qué puedo ayudarte?</div>
+            </section>
+            <footer class="input-area">
+                <form class="chat-fomr">
+                    <input type="text" placeholder="Escribe tu pregunta aquí ..">
+                    <button type="summit">Enviar</button>
+                </form>
+            </footer>
+        </main>
+    </div>
     
 </body>
 </html>

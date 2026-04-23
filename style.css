@@ -1,3 +1,77 @@
+/*
+    CSS PROYECTO SAAS
+    1. RESEREO Y BASES
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+    LAYOUT PRINCIPAL (Flexbox)
+    2. RESEREO Y BASES
+*/
+.app-container{
+    display: flex;
+    height: 100vh; /*respecto a la altura de la ventana*/
+    overflow: hidden;
+}
+.sidebar{
+    width: 260px;
+    background-color: rgb(150, 104, 43);
+    color: rgb(144, 236, 205);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+.logo-area{
+    color: rgb(35, 230, 10);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+/*
+    MENU LATERAL
+    2. RESEREO Y BASES
+*/
+.menu-lateral button{
+    width: 100%;
+    padding-block: 12px;
+    background: transparent;
+    border: 1px solid rgba(32, 29, 29, 0.867);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/*
+    AREA DE CHAT (zona central)
+    4.
+*/
+.chat-area{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(214, 212, 210);
+}
+.chat-header{
+    padding: 15px;
+    border-bottom: 2px solid rgba(32, 29, 29, 0.867);
+    color: white;
+    text-align: center;
+}
+.mensajes-container{
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
 body{
     background-color: black;
     color: white;
@@ -50,3 +124,4 @@ body{
     background-color: white;
     color: black;
 }
+*/
