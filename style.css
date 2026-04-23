@@ -33,8 +33,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 /*
-    MENU LATERAL
-    2. RESEREO Y BASES
+    3. MENU LATERAL
 */
 .menu-lateral button{
     width: 100%;
@@ -48,8 +47,7 @@
 }
 
 /*
-    AREA DE CHAT (zona central)
-    4.
+    4. AREA DE CHAT (zona central)
 */
 .chat-area{
     flex-grow: 1;
