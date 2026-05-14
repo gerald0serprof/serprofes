@@ -11,8 +11,8 @@
     <body>
         <div class="app-container">
             <aside class="sidebar">
-                <div class="logo-area">
-                    <h2 onpointerover="AnimationEvent">IA Master</h2>
+                <div class="logo-area" id="logo">
+                    <h2 onpointerover="animacion(this)">IA Master 🤖</h2>
                 </div>
                 <nav class="menu-lateral">
                     <button>+ Nuevo chat</button>
@@ -33,14 +33,26 @@
                 <header class="chat-header">
                     <h3>Conversación actual</h3>
                 </header>
-
+                <!-- AGREGAR BOTONES  -->
+                <div class="controles-filtros">
+                    <button onclick="mostrarTodo()"> Ver Todo</button>
+                    <button onclick="verMisMensajes()">Mis Mensajes</button>
+                    <button onclick="modoGritar()">Modo Mayúsculas</button>
+                </div>
+                <!-- Eliminar el mensaje Hola ..... y el id="caja-mensajes" -->
+                <!--
                 <section class="mensajes-container">
                     <div class="mensaje-ia">¡Hola! En qué puedo ayudarte?</div>
                 </section>
+                -->
+                <section class="mensajes-container" id="caja-mensajes"></section>
 
                 <footer class="input-area">
                     <form class="chat-form" onsubmit="enviarPrompt(event)">
-                        <input type="text" id="mensaje-input" placeholder="Escribe tu pregunta aquí ..">
+                         <!-- for="mensaje-input" // sr-only = Solo para lectores de pantalla -->                
+                        <label for="mensaje-input" class="sr-only">Mensaje</label>
+                        
+                        <input type="text" id="mensaje-input" placeholder="Escribe tu pregunta aquí .." autocomplete="off">
                         <button type="summit">Enviar</button>
                     </form>
                 </footer>

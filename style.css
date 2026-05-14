@@ -25,6 +25,10 @@
     padding: 15px;
 }
 
+.logo-area{
+    padding: 20px;
+}
+
 .menu-lateral button{
     width: 100%;
     padding: 12px;
@@ -34,6 +38,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
+}
+.historial{
+    padding: 2px;
 }
 
 /* 4. AREA DE CHAT (Zona Central) */
@@ -54,17 +61,36 @@
 }
 .mensajes-container {
     flex-grow: 1; /*Mensajes ocupan el centro*/
-    padding: 40px;
+    padding: 20px 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;/*Centra horizontalmente*/
     align-items: center;/*Centra el contenido verticalmente*/
+    overflow-y: auto;
 }
 
-.mensaje-ia{
-    color: #d1d5db;
-    max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+/*BURBUJAS*/
+.msg-usuario, .msg-ia {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 80%;
+    width: fit-content;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+/* La Burbuja de usuario se alinea a la derecha */
+.msg-usuario {
+    background-color: #19c37d ;
+    color: white;
+    align-self: flex-end;
+}
+/*Se alinea a la izquierda*/
+.msg-ia {
+    background-color: #444654;
+    color: #d1d1d1;
+    align-self: flex-start;
 }
 
 /*5. FORMULARIO DE ENTRADA (input)*/
@@ -92,13 +118,28 @@
 }
 
 .chat-form button {
-    background-color: #19c37d;
+    background-color: green;
     color: white;
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
+
+.chat-form button:hover {
+    opacity: 0.9;
+}
+
+/* sr-only ocultar elemente visualmente sin eliminarlo HTML */
+.sr-only {
+    /*position absolute - para mover libremente top left bottom etc*/
+    position: absolute;
+    /*Mueve muy lejos a la izquierda*/
+    left: -9999px;
+}
+
+
 /* Magic Responsive - Adaptando el chat a pantalla móvil */
 
 /*Para pantallas menos de 768px*/
@@ -125,5 +166,16 @@
     }
     .chat-form button{
         padding: 8px 12px;
+    }    
+}
+
+@media (max-width:480px) {
+    .chat-header h3 {
+        font-size: 1.1rem; /*Achicamos el titulo superior*/
+    }
+
+    .msg-usuario, .msg-ia {
+        max-width: 90%;
+        font-size: 0.95rem;
     }
 }
