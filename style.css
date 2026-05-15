@@ -43,6 +43,15 @@
     padding: 2px;
 }
 
+.historial ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.historial li{
+    margin-bottom: 8px;
+}
+
 /* 4. AREA DE CHAT (Zona Central) */
 
 .chat-area{
@@ -59,7 +68,34 @@
     color: #ececf1;
     text-align: center;
 }
-.mensajes-container {
+
+.controles-filtros{
+    text-align: center;
+    padding: 10px;
+    background-color: #202123;
+    border-bottom: 1px solid #4d4d4f;
+}
+
+.controles-filtros button{
+    background: #444654;
+    color: white;
+    border: 1px solid #565869;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.controles-filtros button:hover{
+    background-color: #565869;
+}
+
+/* Modificamos el mensajes-container
+    - mensajes uno debajo del otro
+    - scroll vertical
+    - simulación real de chat
+*/
+.mensajes-container{
     flex-grow: 1; /*Mensajes ocupan el centro*/
     padding: 20px 40px;
     display: flex;
@@ -70,7 +106,7 @@
 }
 
 /*BURBUJAS*/
-.msg-usuario, .msg-ia {
+.msg-usuario, .msg-ia{
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -81,13 +117,13 @@
 }
 
 /* La Burbuja de usuario se alinea a la derecha */
-.msg-usuario {
+.msg-usuario{
     background-color: #19c37d ;
     color: white;
     align-self: flex-end;
 }
 /*Se alinea a la izquierda*/
-.msg-ia {
+.msg-ia{
     background-color: #444654;
     color: #d1d1d1;
     align-self: flex-start;
@@ -108,16 +144,18 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.chat-form input {
+.chat-form input{
     flex-grow: 1; /* El input estira todo lo que puede*/
     background-color: transparent;
     border: none; /*Sin borde*/
     color: white;
     padding: 10px;
     outline: none; /*Quita el borde azul al hacer click*/
+    /*Aumentamos el tamño de la letra del input*/
+    font-size: 1rem;
 }
 
-.chat-form button {
+.chat-form button{
     background-color: green;
     color: white;
     border: none;
@@ -127,12 +165,12 @@
     transition: 0.3s;
 }
 
-.chat-form button:hover {
+.chat-form button:hover{
     opacity: 0.9;
 }
 
 /* sr-only ocultar elemente visualmente sin eliminarlo HTML */
-.sr-only {
+.sr-only{
     /*position absolute - para mover libremente top left bottom etc*/
     position: absolute;
     /*Mueve muy lejos a la izquierda*/
@@ -143,7 +181,7 @@
 /* Magic Responsive - Adaptando el chat a pantalla móvil */
 
 /*Para pantallas menos de 768px*/
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .sidebar{
         display: none;
     }
